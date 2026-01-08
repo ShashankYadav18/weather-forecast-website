@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Weather Now</title>
+  <link rel="stylesheet" href="style.css">
+  <!-- Default favicon -->
+  <link id="favicon" rel="icon" href="https://img.icons8.com/emoji/48/sun-emoji.png" type="image/png">
+  <script src="script.js" defer></script>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  <!-- Navbar -->
+  <header class="navbar">
+    <div class="logo">☁️ WeatherNow</div>
+    <nav>
+      <a href="#">Home</a>
+      <a href="#">About</a>
+      <a href="#">Forecast</a>
+      <a href="#">Contact</a>
+    </nav>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-text">
+      <h1>Real-Time Weather Forecast</h1>
+      <p>Check live weather updates from anywhere in the world 🌍</p>
+      <div class="search-box">
+        <input type="text" id="cityInput" placeholder="Enter city name">
+        <button onclick="getWeather()">Search</button>
+      </div>
+    </div>
+    <div class="hero-animation">
+      <!-- Cloud floating -->
+      <img src="https://img.icons8.com/emoji/96/cloud-emoji.png" alt="Cloud" class="cloud floating">
+      <!-- Sun rotating -->
+      <img src="https://img.icons8.com/emoji/96/sun-emoji.png" alt="Sun" class="sun rotate">
+    </div>
+
+  </section>
+
+  <!-- Weather Result Section -->
+  <section id="weatherResult" class="weather-card hidden">
+    <h2 id="cityName">City</h2>
+    <p id="temp">-- °C</p>
+    <p id="desc">Description</p>
+    <img id="icon" src="" alt="Weather Icon">
+  </section>
+
+  <!-- Forecast Section -->
+  <section class="forecast">
+    <h2>7-Day Forecast</h2>
+    <div id="forecastCards" class="forecast-cards"></div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>🌦️ WeatherNow © 2025 | Designed with ❤️</p>
+  </footer>
+</body>
+
+</html>
